@@ -20,9 +20,9 @@ const Home = () => {
       <InteractiveGridPattern />
       <div className="relative z-10 max-w-xl sm:max-w-4xl mx-auto lg:mx-96 mt-6 px-4 sm:px-10 py-12 sm:py-16 mb-4">
         <Hero />
+        <ExperienceSection />
         <ProjectsSection />
         <BentoGrid />
-        <ExperienceSection />
         <DockBar />
         <Footer/>
       </div>

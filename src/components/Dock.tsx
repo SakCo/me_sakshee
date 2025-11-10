@@ -3,7 +3,7 @@
 import React from "react";
 import {
     IconBrandGithub,
-    IconBrandX,
+    IconBrandLinkedin,
     IconHome,
     IconTerminal2,
 } from "@tabler/icons-react";
@@ -21,25 +21,25 @@ const DockBar = () => {
             href: "/",
         },
         {
-            title: "Projects",
+            title: "Proof of Work",
             icon: (
                 <IconTerminal2 className="h-full w-full text-foreground hover:text-foreground/50 transition-colors" />
             ),
-            href: "/projects",
+            href: "/proof-of-work",
         },
         {
-            title: "X",
+            title: "LinkedIn",
             icon: (
-                <IconBrandX className="h-full w-full text-foreground hover:text-foreground/50 transition-colors" />
+                <IconBrandLinkedin className="h-full w-full text-foreground hover:text-foreground/50 transition-colors" />
             ),
-            href: "https://x.com/shridmishra",
+            href: "https://www.linkedin.com/in/sakshieee",
         },
         {
             title: "GitHub",
             icon: (
                 <IconBrandGithub className="h-full w-full text-foreground hover:text-foreground/50 transition-colors" />
             ),
-            href: "https://github.com/shridmishra",
+            href: "https://github.com/SakCo",
         },
         {
             title: "Toggle Theme",
@@ -49,7 +49,7 @@ const DockBar = () => {
 
     return (
         <Dock
-            className="fixed bottom-4 left-1/2 -translate-x-1/2"
+            className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50"
             iconSize={40}
             iconMagnification={60}
             iconDistance={140}

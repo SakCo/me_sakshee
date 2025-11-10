@@ -26,10 +26,10 @@ export const Hero = () => {
           <div className="group flex items-start">
             <BorderFrame className="w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0 ">
               <Image
-                src="/assets/pfp.webp"
+                src="/assets/profile.jpg"
                 width={128}
                 height={128}
-                alt="Shrid Mishra"
+                alt="Sakshi Singh"
                 className="
         w-full h-full object-cover 
         transition-all duration-300
@@ -49,7 +49,7 @@ export const Hero = () => {
 
           <div className="flex-1  ">
             <div className="text-xl sm:text-2xl lg:text-3xl font-medium mb-1 leading-tight flex items-center gap-2 ">
-              Shrid Mishra
+              Sakshi Singh
               <BadgeCheck className="text-foreground/80" />
             </div>
             <FlipWords
@@ -61,16 +61,18 @@ export const Hero = () => {
 
         {/* Professional Info */}
         <div className="space-y-1 max-w-2xl mx-auto sm:mx-0">
-          <div className="text-muted my-8 text-md lg:text-lg">I love both <span className="text-foreground">Design</span> & <span className="text-foreground">Development</span>. so, That means I can create beautiful and functional websites. I&apos;m always looking for new opportunities to learn and grow.</div>
+          <div className="text-muted my-8 text-md lg:text-lg">
+            Aspiring <span className="text-foreground">Product Manager</span> and <span className="text-foreground">Business Analyst</span> with a passion for transforming data into actionable insights. I combine strong analytical thinking with strategic business acumen to drive product success and deliver measurable impact. Always eager to solve complex problems and create value through data-driven decision-making.
+          </div>
           <div className="flex items-start lg:items-center gap-3 ">
             <CodeXml className="w-5 h-5 text-muted-foreground flex-shrink-0 " />
-            <Text text="Full Stack & Blockchain Engineer" />
+            <Text text="Product Management & Business Analytics" />
 
           </div>
 
           <div className="flex items-center gap-3">
             <MapPin className="w-5 h-5 text-muted-foreground flex-shrink-0" />
-            <Text text="Mumbai, IN" />
+            <Text text="Ranchi, Jharkhand" />
 
 
           </div>
@@ -78,17 +80,17 @@ export const Hero = () => {
           <div className="flex items-center gap-3">
             <Mail className="w-5 h-5 text-muted-foreground flex-shrink-0" />
             <Link
-              href="mailto:shridmishra00@gmail.com"
+              href="mailto:sakshisinghpie@gmail.com"
               className="text-base sm:text-lg text-foreground/80 hover:text-foreground transition-colors duration-200"
             >
-              <Text text="shridmishra00@gmail.com" />
+              <Text text="sakshisinghpie@gmail.com" />
 
             </Link>
           </div>
 
           <div className="flex items-center gap-3 text-foreground/80 text-base sm:text-lg">
             <UserPen className="w-5 h-5 text-foreground/60 flex-shrink-0" />
-            <Text text="21, He/Him" />
+            <Text text="She/Her" />
 
 
           </div>
@@ -98,7 +100,7 @@ export const Hero = () => {
               <div className="w-2 h-2 bg-accent-foreground rounded-full animate-pulse shadow-sm"></div>
             </div>
             <div className="text-lg text-foreground/80 font-medium">
-              <Text text="Available for Hire" />
+              <Text text="Open for Work" />
 
             </div>
           </div>

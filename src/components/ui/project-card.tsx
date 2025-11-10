@@ -22,11 +22,11 @@ export const ProjectCard = ({
   imageSrc,
 }: ProjectCardProps) => {
   return (
-    <BorderFrame className="">
+    <BorderFrame className="h-full">
       <div
       className="
         group relative flex flex-col border border-white/10 
-         overflow-hidden bg-background 
+         overflow-hidden bg-background h-full
         hover:border-none transition-colors
       "
     >
@@ -63,20 +63,20 @@ export const ProjectCard = ({
       </div>
 
       {/* Content */}
-      <div className="p-4 flex flex-col flex-1">
+      <div className="p-4 flex flex-col flex-1 min-h-[180px]">
         <header className="mb-1">
-          <h3 className="text-md font-medium tracking-tight text-primary">
+          <h3 className="text-md font-medium tracking-tight text-primary line-clamp-2 min-h-[3rem]">
             {title}
           </h3>
         </header>
 
-        <p className="text-sm text-muted-foreground mb-4 leading-snug">
+        <p className="text-sm text-muted-foreground mb-4 leading-snug line-clamp-3 min-h-[4rem]">
           {description}
         </p>
 
         <div className="flex items-center justify-between mt-auto">
           {/* Tech Stack */}
-          <div className="flex flex-wrap gap-1.5">
+          <div className="flex flex-wrap gap-1.5 min-h-[2rem] items-center">
             {tech.slice(0, 3).map((item) => (
               <span
                 key={item}

@@ -1,25 +1,57 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { ProjectCard } from "@/src/components/ui/project-card";
-import { projects } from "../lib/constants";
+import { projects, caseStudies } from "../lib/constants";
 import Title from "./ui/title";
 
 export const ProjectsSection = () => {
-  // Limit to 6 projects
-  const displayedProjects = projects.slice(0, 6);
+  const [activeTab, setActiveTab] = useState<"projects" | "case-studies">("projects");
+
+  // Limit to 6 items (first 6 from selected tab)
+  const allItems = activeTab === "projects" ? projects : caseStudies;
+  const displayedItems = allItems.slice(0, 6);
 
   return (
     <section className="pt-8 lg:pt-16 px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <Title title="Proof Of Work" subtitle="A showcase of my work in full-stack & blockchain applications." />
+        <Title title="Proof Of Work" subtitle="Product management and analytics projects showcasing data-driven decision making." />
         
+        {/* Tab Navigation */}
+        <div className="flex justify-center mb-8 mt-8">
+          <div className="inline-flex items-center gap-2 p-1 bg-muted/30 rounded-lg border border-border/30">
+            <button
+              onClick={() => setActiveTab("projects")}
+              className={`
+                px-6 py-2.5 rounded-md text-sm font-medium transition-all duration-300
+                ${activeTab === "projects" 
+                  ? "bg-background text-foreground shadow-sm border border-border/50" 
+                  : "text-muted-foreground hover:text-foreground"
+                }
+              `}
+            >
+              Projects
+            </button>
+            <button
+              onClick={() => setActiveTab("case-studies")}
+              className={`
+                px-6 py-2.5 rounded-md text-sm font-medium transition-all duration-300
+                ${activeTab === "case-studies" 
+                  ? "bg-background text-foreground shadow-sm border border-border/50" 
+                  : "text-muted-foreground hover:text-foreground"
+                }
+              `}
+            >
+              Case Studies
+            </button>
+          </div>
+        </div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 mb-8">
-          {displayedProjects.map((project, index) => (
+          {displayedItems.map((project, index) => (
             <div
               key={project.title}
               className="group h-full"
@@ -45,10 +77,10 @@ export const ProjectsSection = () => {
         <footer >
           <div className="text-end">
             <Link
-              href="/projects"
+              href="/proof-of-work"
               className="group inline-flex items-center gap-3 text-md lg:text-lg font-normal text-foreground hover:text-foreground/80 transition-all duration-300 hover:gap-4"
             >
-              <span>Explore More Projects</span>
+              <span>Explore More</span>
               <div className="flex items-center justify-center w-8 h-8 rounded-full border border-border/30 group-hover:border-border/60 group-hover:bg-muted/50 transition-all duration-300">
                 <svg
                   className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"

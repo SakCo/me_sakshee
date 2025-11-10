@@ -2,47 +2,42 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  SiNextdotjs,
-  SiTypescript,
+  SiTableau,
+  SiPython,
   SiPostgresql,
-  SiPrisma,
-  SiTailwindcss,
-  SiSolana,
-  SiRust,
-  SiNodedotjs,
-  SiReact,
-  SiJavascript,
-  SiGit,
-  SiDocker,
-  SiKubernetes,
-  SiExpress,
+  SiMysql,
+  SiJira,
+  SiFigma,
+  SiNotion,
+  SiGoogleanalytics,
   SiMongodb,
-  SiSolidity,
-  SiEthereum,
 } from "react-icons/si";
+import { Database, BarChart3, TrendingUp, Users, Target, Lightbulb, FileSpreadsheet, PieChart, Brain, Kanban } from "lucide-react";
 
 const baseIcons = [
-  SiNextdotjs,
-  SiTypescript,
+  SiTableau,
+  SiPython,
+  FileSpreadsheet, // Excel
+  PieChart, // Power BI
   SiPostgresql,
-  SiPrisma,
-  SiTailwindcss,
-  SiSolana,
-  SiRust,
-  SiNodedotjs,
-  SiReact,
-  SiJavascript,
-  SiExpress,
-  SiGit,
-  SiDocker,
-  SiKubernetes,
+  SiMysql,
+  SiJira,
+  SiFigma,
+  SiNotion,
+  SiGoogleanalytics,
   SiMongodb,
-  SiSolidity,
-  SiEthereum
+  Database,
+  BarChart3,
+  TrendingUp,
+  Users,
+  Target,
+  Lightbulb,
+  Brain,
+  Kanban,
 ];
 
 export const SkillsCarousel = () => {
-  const repeatedIcons = [...baseIcons, ...baseIcons, ...baseIcons]; 
+  const repeatedIcons = [...baseIcons, ...baseIcons, ...baseIcons, ...baseIcons]; 
   const half = Math.ceil(repeatedIcons.length / 2);
   const firstRow = repeatedIcons.slice(0, half);
   const secondRow = repeatedIcons.slice(half);
@@ -53,28 +48,34 @@ export const SkillsCarousel = () => {
       <div className="space-y-4">
         <motion.div
           className="flex gap-6"
-          animate={{ x: ["0%", "-50%"] }} 
+          animate={{ x: [0, -1920] }} 
           transition={{
-            repeat: Infinity,
-            duration: 7,
-            ease: "linear",
+            x: {
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 45,
+              ease: "linear",
+            }
           }}
         >
-          {[...firstRow, ...firstRow].map((Icon, idx) => (
+          {[...firstRow, ...firstRow, ...firstRow].map((Icon, idx) => (
             <Icon key={`row1-${idx}`} size={32} className="text-secondary flex-shrink-0" />
           ))}
         </motion.div>
 
         <motion.div
           className="flex gap-6 mt-8"
-          animate={{ x: ["-50%", "0%"] }} // opposite direction
+          animate={{ x: [-1920, 0] }}
           transition={{
-            repeat: Infinity,
-            duration: 7,
-            ease: "linear",
+            x: {
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 45,
+              ease: "linear",
+            }
           }}
         >
-          {[...secondRow, ...secondRow].map((Icon, idx) => (
+          {[...secondRow, ...secondRow, ...secondRow].map((Icon, idx) => (
             <Icon key={`row2-${idx}`} size={32} className="text-secondary flex-shrink-0" />
           ))}
         </motion.div>

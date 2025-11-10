@@ -8,6 +8,10 @@ interface Blog {
   link: string;
 }
 
+interface RecentBlogsProps {
+  showTitle?: boolean;
+}
+
 const blogs: Blog[] = [
   {
     title: "Connect Node.js to MongoDB: The Right Way",
@@ -20,10 +24,10 @@ const blogs: Blog[] = [
  
 ];
 
-export const RecentBlogs = () => {
+export const RecentBlogs = ({ showTitle = true }: RecentBlogsProps) => {
   return (
     <div className="bg-card rounded-xl p-4 shadow-md ">
-      <h2 className="text-lg mb-3 text-secondary-foreground/90 font-light">Recent Blogs</h2>
+      {showTitle && <h2 className="text-lg mb-3 text-secondary-foreground/90 font-light">Recent Blogs</h2>}
       <ul className="space-y-2 font-extralight text-secondary">
         {blogs.map((blog, idx) => (
           <li key={idx}>

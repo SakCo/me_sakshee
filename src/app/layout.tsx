@@ -3,10 +3,10 @@ import "./globals.css";
 import ThemeProvider from "../context/provider";
 
 const info = {
-  name: "Shrid Mishra",
-  twitter: "@ShridMishra",
+  name: "Sakshi Singh",
+  twitter: "@i_m_sakshee",
   description:
-    "Full-Stack Developer specializing in Next.js, TypeScript, and Solana. Crafting modern, scalable, and high-performance web experiences.",
+    "Aspiring Product Manager | Data Enthusiast | Passionate about Building User-Centric Digital Experiences",
   url: "https://shrid.in",
   image: "https://shrid.in/assets/preview.png", 
 };
@@ -14,7 +14,7 @@ const info = {
 export const metadata: Metadata = {
   metadataBase: new URL(info.url),
   title: {
-    default: `${info.name} | Full-Stack Developer & Solana Enthusiast`,
+    default: `${info.name} | Aspiring Product Manager | Data Enthusiast`,
     template: `%s | ${info.name}`,
   },
   description: info.description,
