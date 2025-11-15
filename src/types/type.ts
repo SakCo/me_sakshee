@@ -31,6 +31,19 @@ export interface I_Experience {
     highlights?: string[]
 }
 
+export interface I_Project {
+    title: string;
+    description: string;
+    tech: string[];
+    status: string;
+    year: string;
+    link: string;
+    code: string;
+    imageSrc: string;
+    isMedium?: boolean;
+    metrics?: string;
+}
+
 export interface DarkModeContextType {
     isDarkMode: boolean;
     toggleDarkMode: () => void;

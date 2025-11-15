@@ -79,6 +79,7 @@ const ProofOfWorkPage = () => {
                 imageSrc={item.imageSrc}
                 link={item.link}
                 source={item.code}
+                isMedium={item.isMedium}
               />
             </div>
           ))}
