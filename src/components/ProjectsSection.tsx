@@ -68,6 +68,7 @@ export const ProjectsSection = () => {
                 link={project.link}
                 source={project.code}
                 imageSrc={project.imageSrc}
+                isMedium={project.isMedium}
               />
             </div>
           ))}
