@@ -26,7 +26,7 @@ export const Hero = () => {
           <div className="group flex items-start">
             <BorderFrame className="w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0 ">
               <Image
-                src="/assets/profile.jpg"
+                src="/assets/SakshiAnime.png"
                 width={128}
                 height={128}
                 alt="Sakshi Singh"
