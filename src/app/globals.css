@@ -312,3 +312,20 @@ html {
     @apply px-2.5 py-1 text-xs font-medium bg-secondary/50 text-secondary-foreground rounded-md border border-border/30;
   }
 }
+
+/* Skills marquee */
+@keyframes skills-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.skills-track {
+  animation: skills-marquee 70s linear infinite;
+}
+.skills-track-reverse {
+  animation: skills-marquee 70s linear infinite reverse;
+}
+.skills-track:hover,
+.skills-track-reverse:hover {
+  animation-play-state: paused;
+}

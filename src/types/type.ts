@@ -28,7 +28,8 @@ export interface I_Experience {
     duration: string,
     job_title: string,
     description: string,
-    highlights?: string[]
+    highlights?: string[],
+    accent?: string // tailwind gradient classes for the fallback avatar
 }
 
 export interface I_Project {
@@ -68,11 +69,3 @@ export interface ApiResponse {
     message: string;
 };
 
-export interface Blog {
-    id: string;
-    title: string;
-    author: string;
-    createdAt: string;
-    image_public_id: string;
-    content: string;
-}

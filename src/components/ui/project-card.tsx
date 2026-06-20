@@ -48,7 +48,7 @@ export const ProjectCard = ({
                 alt={title}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover lg:group-hover:filter-none lg:filter lg:grayscale"
+                className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
               />
             </div>
           </a>
