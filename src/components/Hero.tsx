@@ -5,14 +5,17 @@ import BorderFrame from "./ui/BorderFrame";
 import { FlipWords } from "./ui/flip-words";
 import { words } from "../lib/constants";
 import {
-  MapPin,
-  Mail,
-
-
-  CodeXml,
-  UserPen,
-  BadgeCheck
+  BadgeCheck,
+  FileText,
+  ExternalLink
 } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import {
+  SourceCodeIcon,
+  Location01Icon,
+  Mail01Icon,
+  UserCircleIcon,
+} from "@hugeicons/core-free-icons";
 import Text from "./ui/text";
 
 export const Hero = () => {
@@ -31,10 +34,8 @@ export const Hero = () => {
                 height={128}
                 alt="Sakshi Singh"
                 className="
-        w-full h-full object-cover 
+        w-full h-full object-cover
         transition-all duration-300
-       lg:group-hover:filter-none lg:filter lg:grayscale
-        
       "
                 priority
               />
@@ -62,23 +63,23 @@ export const Hero = () => {
         {/* Professional Info */}
         <div className="space-y-1 max-w-2xl mx-auto sm:mx-0">
           <div className="text-muted my-8 text-md lg:text-lg">
-            Aspiring <span className="text-foreground">Product Manager</span> and <span className="text-foreground">Business Analyst</span> with a passion for transforming data into actionable insights. I combine strong analytical thinking with strategic business acumen to drive product success and deliver measurable impact. Always eager to solve complex problems and create value through data-driven decision-making.
+            Aspiring <span className="text-foreground">Product Manager</span>, <span className="text-foreground">Business Analyst</span> and <span className="text-foreground">Data Analyst</span> with a strong foundation in analytics, product thinking and strategy. I turn data and user insights into clear product direction and measurable impact, working across product, growth and operations to build things people actually use.
           </div>
           <div className="flex items-start lg:items-center gap-3 ">
-            <CodeXml className="w-5 h-5 text-muted-foreground flex-shrink-0 " />
-            <Text text="Product Management & Business Analytics" />
+            <HugeiconsIcon icon={SourceCodeIcon} size={20} color="#6366f1" strokeWidth={1.8} className="flex-shrink-0" />
+            <Text text="Product · Business Analysis · Data · Strategy" />
 
           </div>
 
           <div className="flex items-center gap-3">
-            <MapPin className="w-5 h-5 text-muted-foreground flex-shrink-0" />
-            <Text text="Ranchi, Jharkhand" />
+            <HugeiconsIcon icon={Location01Icon} size={20} color="#f43f5e" strokeWidth={1.8} className="flex-shrink-0" />
+            <Text text="Ahmedabad, Gujarat" />
 
 
           </div>
 
           <div className="flex items-center gap-3">
-            <Mail className="w-5 h-5 text-muted-foreground flex-shrink-0" />
+            <HugeiconsIcon icon={Mail01Icon} size={20} color="#0ea5e9" strokeWidth={1.8} className="flex-shrink-0" />
             <Link
               href="mailto:sakshisinghpie@gmail.com"
               className="text-base sm:text-lg text-foreground/80 hover:text-foreground transition-colors duration-200"
@@ -89,20 +90,32 @@ export const Hero = () => {
           </div>
 
           <div className="flex items-center gap-3 text-foreground/80 text-base sm:text-lg">
-            <UserPen className="w-5 h-5 text-foreground/60 flex-shrink-0" />
+            <HugeiconsIcon icon={UserCircleIcon} size={20} color="#a855f7" strokeWidth={1.8} className="flex-shrink-0" />
             <Text text="She/Her" />
 
 
           </div>
 
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 flex items-center justify-center flex-shrink-0 pr-1">
-              <div className="w-2 h-2 bg-accent-foreground rounded-full animate-pulse shadow-sm"></div>
-            </div>
-            <div className="text-lg text-foreground/80 font-medium">
-              <Text text="Open for Work" />
+          {/* Open for Work badge + Resume */}
+          <div className="flex flex-wrap items-center gap-3 pt-3">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-emerald-600 dark:text-emerald-400 shadow-sm">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
+              </span>
+              <span className="text-sm font-semibold tracking-wide">Open for Work</span>
+            </span>
 
-            </div>
+            <Link
+              href="/assets/Sakshi_Singh_Resume_L1.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border/50 bg-card/40 backdrop-blur-sm text-sm font-medium text-foreground hover:border-border/80 hover:bg-muted/30 transition-all"
+            >
+              <FileText className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors" />
+              <span>View Resume</span>
+              <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:text-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+            </Link>
           </div>
         </div>
       </div>

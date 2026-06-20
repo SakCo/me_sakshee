@@ -1,13 +1,27 @@
 import { I_Experience, I_Project } from "@/src/types/type";
 
 export const words = [
-  "Product Management Enthusiast",
+  "Product Manager",
   "Business Analyst",
-  "Data-Driven Decision Maker",
-  "Strategic Problem Solver",
+  "Data Analyst",
+  "Strategy & Growth",
 ];
 
 export const experienceData: I_Experience[] = [
+  {
+    company_link: "#",
+    company_logo: "/assets/gentle_money_logo.jpg",
+    company_name: "Gentle Money",
+    duration: "Feb 2026 - Present",
+    job_title: "Founder's Office Intern",
+    description: "Partnering with the founder on product strategy, monetization, and growth across product, operations, and revenue.",
+    accent: "from-emerald-400 to-teal-600",
+    highlights: [
+      "Partnered with the Founder on product strategy, monetization, and growth, shaping decisions across product, operations, and revenue",
+      "Ran market research, competitor benchmarking, and pricing analysis, translating findings into MRDs and strategic recommendations that guided product direction",
+      "Built revenue forecasting models and monetization frameworks, delivering pitch decks, BI reports, and investment calculators for key business decisions"
+    ]
+  },
   {
     company_link: "#",
     company_logo: "/assets/analyticsresource.jpg",
@@ -15,6 +29,7 @@ export const experienceData: I_Experience[] = [
     duration: "Jun 2025 - Aug 2025",
     job_title: "Data Analyst Intern",
     description: "Integrated product APIs and performed statistical analysis to drive data-driven insights and optimize revenue strategies.",
+    accent: "from-blue-400 to-indigo-600",
     highlights: [
       "Integrated Product APIs from Amazon, Flipkart, Myntra, and travel platforms to extract 10K+ product and travel records using ETL pipelines for data cleaning, transformation, and exploratory analysis",
       "Conducted statistical analysis to identify seasonal trends, category performance patterns, and profit optimization opportunities, delivering actionable insights that enhanced revenue strategies",
@@ -30,6 +45,7 @@ export const experienceData: I_Experience[] = [
     duration: "Dec 2024 - Jan 2025",
     job_title: "Business Analyst Intern",
     description: "Leveraged data analytics and Agile methodologies to drive product decisions in Web3 gaming ecosystem.",
+    accent: "from-violet-400 to-purple-600",
     highlights: [
       "Analyzed user engagement and product metrics to identify behavioral trends, improving data-driven decision-making for growth and retention strategies",
       "Collaborated with cross-functional teams in an Agile/Scrum environment to define business requirements, user stories, and product KPIs for new feature rollouts",
@@ -45,12 +61,55 @@ export const experienceData: I_Experience[] = [
     duration: "Sep 2024 - Nov 2024",
     job_title: "Growth & Strategy Intern",
     description: "Drove product growth initiatives and collaborated with cross-functional teams to enhance user engagement and retention.",
+    accent: "from-orange-400 to-rose-500",
     highlights: [
       "Conducted comprehensive market and competitor analysis to identify strategic growth opportunities, leading to successful onboarding of 12 niche influencers and acquisition of 500+ active users within 6 weeks",
       "Collaborated with product and marketing teams to design and launch 3 user engagement initiatives, resulting in 40% improvement in user retention and 25% month-over-month lead growth",
       "Translated user feedback and pain points into actionable product requirements, streamlining onboarding workflows and increasing feature adoption by 30%",
       "Developed data-driven growth strategies by analyzing user behavior metrics and market trends to inform product roadmap decisions",
       "Facilitated cross-functional alignment between product, marketing, and customer success teams to ensure cohesive execution of growth initiatives"
+    ]
+  },
+  {
+    company_link: "#",
+    company_logo: "/assets/wanderwise_private_limited_logo.jpg",
+    company_name: "Wander Wise",
+    duration: "Jan 2024 - Apr 2024",
+    job_title: "Content Writer",
+    description: "Created SEO-driven travel content for a travel-tech startup simplifying flight, rail, and holiday bookings.",
+    accent: "from-sky-400 to-cyan-600",
+    highlights: [
+      "Tasked with growing organic reach for an early-stage travel brand, researched high-intent destinations and traveler queries to build a focused content calendar that lifted blog engagement",
+      "Wrote SEO-optimized travel guides, itineraries, and booking explainers, improving search visibility and driving steady inbound traffic to the platform",
+      "Standardized the brand voice across website and social copy, making flight, rail, and holiday offerings clearer and increasing reader time on page"
+    ]
+  },
+  {
+    company_link: "#",
+    company_logo: "/assets/crypfi_io_logo.jpg",
+    company_name: "CrypFi",
+    duration: "Oct 2023 - Dec 2023",
+    job_title: "Content Writer & Social Media Manager",
+    description: "Produced Web3 content and managed social channels to grow community engagement for a crypto brand.",
+    accent: "from-amber-400 to-orange-600",
+    highlights: [
+      "Brought on to build community trust for a crypto product, translated complex Web3 and DeFi concepts into accessible blogs, threads, and infographics that grew audience understanding",
+      "Managed daily posting across Twitter/X, Telegram, and Discord, tailoring content to each platform to drive consistent community engagement and follower growth",
+      "Planned content calendars around market trends and product updates, increasing post reach and keeping the community active during launches"
+    ]
+  },
+  {
+    company_link: "#",
+    company_logo: "/assets/zuraverse.jpg",
+    company_name: "Zuraverse (Web3 Gaming & Metaverse Platform)",
+    duration: "Jul 2023 - Dec 2023",
+    job_title: "PR & Marketing Intern",
+    description: "Led PR, research, and marketing for a Web3 play-earn-conserve gaming metaverse.",
+    accent: "from-fuchsia-400 to-purple-600",
+    highlights: [
+      "Joined a Web3 play-earn-conserve gaming startup to raise brand awareness, running PR outreach that secured media features across crypto and gaming communities",
+      "Executed marketing and community campaigns around game launches and the $ZURA ecosystem, growing social engagement and reach",
+      "Researched Web3 gaming and NFT trends to sharpen brand positioning and go-to-market messaging for new releases"
     ]
   },
 ];
